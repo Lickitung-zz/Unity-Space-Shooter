@@ -26,7 +26,7 @@ public class Player : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log("Space Key Pressed");
+            Debug.Log("Space Key Pressed on Player");
             Instantiate(_laserPrefab, transform.position, Quaternion.identity);
         }
     }
