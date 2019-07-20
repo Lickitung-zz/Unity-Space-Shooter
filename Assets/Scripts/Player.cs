@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField]
-    private float _speed = 3.5f;
+    private float _speed = 10.5f;
     [SerializeField]
     private GameObject _laserPrefab;
 
@@ -48,13 +48,13 @@ public class Player : MonoBehaviour
             transform.position = new Vector3(transform.position.x, -3.8f, 0);
         }
 
-        if (transform.position.x > 10)
+        if (transform.position.x > 20)
         {
-            transform.position = new Vector3(-10, transform.position.y, 0);
+            transform.position = new Vector3(-20, transform.position.y, 0);
         }
-        else if (transform.position.x < -10)
+        else if (transform.position.x < -20)
         {
-            transform.position = new Vector3(10, transform.position.y, 0);
+            transform.position = new Vector3(20, transform.position.y, 0);
         }
     }
 }

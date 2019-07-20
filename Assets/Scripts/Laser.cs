@@ -24,10 +24,10 @@ public class Laser : MonoBehaviour
 
         //if laser position is greater than 5 on the y
         //destroy the object
-        if (transform.position.y >= 5)
+        if (transform.position.y >= 11.5f)
         {
             DestroyLaser();
-        }
+        } 
     }
 
     void DestroyLaser()
