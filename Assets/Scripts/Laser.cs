@@ -17,11 +17,19 @@ public class Laser : MonoBehaviour
     void Update()
     {
         //translate laser up
-        
-
-        
         transform.Translate(Vector3.up * _speed * Time.deltaTime);
 
+        if (transform.position.y >= 5)
+        {
+            DestroyLaser();
+        }
 
+        //if laser position is greater than 5 on the y
+        //destroy the object
+    }
+
+    void DestroyLaser()
+    {
+        Destroy(gameObject);
     }
 }
