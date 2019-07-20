@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         //take the current position = new position (0, 0, 0)
-        transform.position = new Vector3(-8, -4, 0);
+        transform.position = new Vector3(-1.5f, -3, 0);
     }
 
     // Update is called once per frame
@@ -26,13 +26,11 @@ public class Player : MonoBehaviour
 
         // if i hit the space key
         // spawn gameObject
-
         if (Input.GetKeyDown(KeyCode.Space) && Time.time > _canFire)
         {
-            Debug.Log("Space Key Pressed on Player");
-            _canFire = Time.time + _fireRate;
-            Instantiate(_laserPrefab, transform.position + new Vector3(0, .8f, 0), Quaternion.identity);
+            FireLaser();
         }
+        
     }
 
     void CalculateMovement()
@@ -60,5 +58,12 @@ public class Player : MonoBehaviour
         {
             transform.position = new Vector3(20, transform.position.y, 0);
         }
+    }
+
+    void FireLaser()
+    {
+        Debug.Log("Space Key Pressed on Player");
+        _canFire = Time.time + _fireRate;
+        Instantiate(_laserPrefab, transform.position + new Vector3(0, .8f, 0), Quaternion.identity);
     }
 }
