@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    [SerializeField]
     private float _speed = 4.0f;
+
 
     // Start is called before the first frame update
     void Start()
@@ -21,8 +23,8 @@ public class Enemy : MonoBehaviour
         //if bottom of screen
         if (transform.position.y < -5.1f)
         {
-            transform.position = new Vector3(transform.position.x, 11.8f, 0);
+            //respawn at top (with a new random x position?)
+            transform.position = new Vector3(Random.Range(-11.8f, 11.8f), 7, 0);
         }
-        //respawn at top (with a new random x position?)
     }
 }
