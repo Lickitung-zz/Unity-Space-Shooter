@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [SerializeField]
-    private float _speed = 4.0f;
+    private float _speed = 2.5f;
 
 
     // Start is called before the first frame update
@@ -25,7 +25,7 @@ public class Enemy : MonoBehaviour
         {
             //respawn at top (with a new random x position?)
             float randomX = Random.Range(-11.8f, 11.8f);
-            transform.position = new Vector3(randomX, 11.8f), 7, 0);
+            transform.position = new Vector3(randomX, 7, 0);
         }
     }
 }
