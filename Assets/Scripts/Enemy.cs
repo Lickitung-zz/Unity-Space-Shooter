@@ -24,7 +24,8 @@ public class Enemy : MonoBehaviour
         if (transform.position.y < -5.1f)
         {
             //respawn at top (with a new random x position?)
-            transform.position = new Vector3(Random.Range(-11.8f, 11.8f), 7, 0);
+            float randomX = Random.Range(-11.8f, 11.8f);
+            transform.position = new Vector3(randomX, 11.8f), 7, 0);
         }
     }
 }
