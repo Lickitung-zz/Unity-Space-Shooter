@@ -11,7 +11,7 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        transform.position = new Vector3(0, 10, 0);
+        transform.position = new Vector3(0, 12.5f, 0);
     }
 
     // Update is called once per frame
@@ -24,8 +24,8 @@ public class Enemy : MonoBehaviour
         if (transform.position.y < -5.1f)
         {
             //respawn at top (with a new random x position?)
-            float randomX = Random.Range(-11.8f, 11.8f);
-            transform.position = new Vector3(randomX, 7, 0);
+            float randomX = Random.Range(-18.0f, 12.5f);
+            transform.position = new Vector3(randomX, 12.48f, 0);
         }
     }
 }
