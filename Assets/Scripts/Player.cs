@@ -69,7 +69,7 @@ public class Player : MonoBehaviour
     {
         Debug.Log("Space Key Pressed on Player");
         _canFire = Time.time + _fireRate;
-        Instantiate(_laserPrefab, transform.position + new Vector3(0, .8f, 0), Quaternion.identity);
+        Instantiate(_laserPrefab, transform.position + new Vector3(0, 1.08f, 0), Quaternion.identity);
     }
 
     public void Damage()

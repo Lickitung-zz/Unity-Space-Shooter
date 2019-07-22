@@ -26,7 +26,7 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Hit: " + other.transform.name);
+        Debug.Log("Enemy hit by: " + other.transform.name);
         //if other is Player
         if (other.tag == "Player")
         {
@@ -46,6 +46,7 @@ public class Enemy : MonoBehaviour
 
         if (other.tag == "Laser")
         {
+            Debug.Log("Laser is colliding with Enemy");
             Destroy(other.gameObject);
             Destroy(this.gameObject);
         }

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6800976677860899107}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92,7 +92,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 113.1
-  _laserPrefab: {fileID: 0}
+  _laserPrefab: {fileID: 4091723611799440260, guid: f351aa2f339eb924f957dbf4baa1ae1f,
+    type: 3}
   _fireRate: 0.75
   _lives: 3
 --- !u!61 &6800976677860899107
@@ -105,7 +106,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
