@@ -33,7 +33,14 @@ public class Enemy : MonoBehaviour
     {
         Debug.Log("Hit: " + other.transform.name);
         //if other is Player
-        //Destroy Us
+        if (other.transform.name == "Player")
+        {
+            Debug.Log("Made it to conditional statement");
+            //Destroy Us
+            Destroy(this.gameObject);
+            //damage the player
+            Player.
+        }
         //damage the player
 
         //if other is laser
