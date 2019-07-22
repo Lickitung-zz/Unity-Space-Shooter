@@ -28,4 +28,16 @@ public class Enemy : MonoBehaviour
             transform.position = new Vector3(randomX, 12.48f, 0);
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("Hit: " + other.transform.name);
+        //if other is Player
+        //Destroy Us
+        //damage the player
+
+        //if other is laser
+        //destroy laser
+        //destroy us
+    }
 }
