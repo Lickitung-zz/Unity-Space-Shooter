@@ -35,11 +35,18 @@ public class Enemy : MonoBehaviour
         //if other is Player
         if (other.tag == "Player")
         {
-            Debug.Log("Made it to conditional statement");
+           
             //Destroy Us
             Destroy(this.gameObject);
             //damage the player
-                      
+            Player player = other.transform.GetComponent<Player>();
+
+            if (player != null)
+            {
+                player.Damage();
+            }
+
+
         }
 
         if (other.tag == "Laser")
