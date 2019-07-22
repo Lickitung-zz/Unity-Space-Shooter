@@ -14,20 +14,16 @@ public class Player : MonoBehaviour
     [SerializeField]
     private int _lives = 3;
 
-    // Start is called before the first frame update
+
     void Start()
     {
-        //take the current position = new position (0, 0, 0)
         transform.position = new Vector3(-1.5f, -3, 0);
     }
 
-    // Update is called once per frame
     void Update()
     {
         CalculateMovement();
 
-        // if i hit the space key
-        // spawn gameObject
         if (Input.GetKeyDown(KeyCode.Space) && Time.time > _canFire)
         {
             FireLaser();
@@ -73,11 +69,9 @@ public class Player : MonoBehaviour
     {
         _lives--;
 
-        //check if dead
         if (_lives < 1)
         {
             Destroy(this.gameObject);
         }
-        //destroy us
     }
 }
