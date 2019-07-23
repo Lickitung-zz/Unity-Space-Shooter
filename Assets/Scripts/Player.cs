@@ -13,6 +13,9 @@ public class Player : MonoBehaviour
     private float _canFire = -1f;
     [SerializeField]
     private int _lives = 3;
+    [SerializeField]
+    private GameObject _tripleShot;
+    private bool _tripleShotActive = true;
     private SpawnManager _spawnManager;
 
 
@@ -69,7 +72,21 @@ public class Player : MonoBehaviour
     {
         Debug.Log("Space Key Pressed on Player");
         _canFire = Time.time + _fireRate;
-        Instantiate(_laserPrefab, transform.position + new Vector3(0, 1.08f, 0), Quaternion.identity);
+        
+        
+
+        //if space key press,
+
+        //if tripleshotActive is true
+        if (_tripleShotActive == true)
+        {
+            Instantiate(_tripleShot, transform.position + new Vector3(0, 1.08f, 0), Quaternion.identity);
+        }
+        else
+        {
+            Instantiate(_laserPrefab, transform.position + new Vector3(0, 1.08f, 0), Quaternion.identity);
+        }
+
     }
 
     public void Damage()
