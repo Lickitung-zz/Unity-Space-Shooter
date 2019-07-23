@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Powerup : MonoBehaviour
 {
+    [SerializeField]
+    private float _speed = 3.0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,8 +17,14 @@ public class Powerup : MonoBehaviour
     void Update()
     {
         //move down at a speed of 3
+        transform.Translate(Vector3.down * _speed * Time.deltaTime);
 
         //when leave screen, destroy this object
+        if (transform.position.y < -4.54)
+        {
+            float randomX = Random.Range(-18.0f, 12.5f);
+            transform.position = new Vector3(randomX, 11, 0);
+        }
 
 
     }
