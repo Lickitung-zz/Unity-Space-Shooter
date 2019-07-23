@@ -14,8 +14,9 @@ public class Player : MonoBehaviour
     [SerializeField]
     private int _lives = 3;
     [SerializeField]
-    private GameObject _tripleShot;
-    private bool _tripleShotActive = true;
+    private GameObject _tripleShotPrefab;
+    [SerializeField]
+    private bool _isTripleShotActive = true;
     private SpawnManager _spawnManager;
 
 
@@ -78,9 +79,9 @@ public class Player : MonoBehaviour
         //if space key press,
 
         //if tripleshotActive is true
-        if (_tripleShotActive == true)
+        if (_isTripleShotActive == true)
         {
-            Instantiate(_tripleShot, transform.position + new Vector3(0, 1.08f, 0), Quaternion.identity);
+            Instantiate(_tripleShotPrefab, transform.position, Quaternion.identity);
         }
         else
         {
