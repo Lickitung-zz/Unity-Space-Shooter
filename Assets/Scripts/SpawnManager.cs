@@ -43,12 +43,11 @@ public class SpawnManager : MonoBehaviour
     IEnumerator SpawnPowerupRoutine()
     {
         //every 3-7 secs, spawn p-up
-        Powerup powerup = transform.GetComponent<Powerup>();
         while (_stopSpawning == false)
         {
             Vector3 posToSpawn = new Vector3(Random.Range(17f, -20f), 12.5f, 0);
             Instantiate(_tripleShotPowerupPrefab, posToSpawn, Quaternion.identity);
-            yield return new WaitForSeconds(Random.Range(3, 8));
+            yield return new WaitForSeconds(5);
         }
     }
 

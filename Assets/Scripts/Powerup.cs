@@ -22,8 +22,7 @@ public class Powerup : MonoBehaviour
         //when leave screen, destroy this object
         if (transform.position.y < -4.54)
         {
-            float randomX = Random.Range(-18.0f, 12.5f);
-            transform.position = new Vector3(randomX, 11, 0);
+            Destroy(gameObject);
         }
 
         
