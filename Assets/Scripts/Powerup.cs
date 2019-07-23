@@ -34,7 +34,7 @@ public class Powerup : MonoBehaviour
         if (collision.tag == "Player")
         {
 
-
+            Debug.Log("Powerup collided with: " + collision);
             Destroy(this.gameObject);
 
             Player player = collision.transform.GetComponent<Player>();

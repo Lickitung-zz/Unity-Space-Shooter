@@ -93,6 +93,13 @@ public class Player : MonoBehaviour
     public void TripleShotBool()
     {
         _isTripleShotActive = true;
+        StartCoroutine(TripleShotPowerDownRoutine());
+    }
+
+    IEnumerator TripleShotPowerDownRoutine()
+    {
+        yield return new WaitForSeconds(5);
+        _isTripleShotActive = false;
     }
 
     public void Damage()
