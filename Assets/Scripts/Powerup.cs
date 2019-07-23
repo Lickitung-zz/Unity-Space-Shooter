@@ -26,7 +26,26 @@ public class Powerup : MonoBehaviour
             transform.position = new Vector3(randomX, 11, 0);
         }
 
+        
+    }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+
+
+            Destroy(this.gameObject);
+
+            Player player = collision.transform.GetComponent<Player>();
+
+            if (player != null)
+            {
+                player.TripleShotBool();
+            }
+
+
+        }
     }
 
     //OnTriggerCollison
