@@ -27,7 +27,6 @@ public class Enemy : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("Enemy hit by: " + other.transform.name);
-        //if other is Player
         if (other.tag == "Player")
         {
            
